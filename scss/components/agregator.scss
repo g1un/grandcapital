@@ -1,0 +1,41 @@
+/*agregator*/
+.agregator {
+
+  max-width: 395px;
+
+  margin: 0 auto;
+
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: -$arrow-width;
+    left: 50%;
+    margin-left: -$arrow-width / 2;
+
+    @include sprite($arrow);
+
+    transform: rotate(90deg);
+  }
+
+  &__title {
+    margin-bottom: 19px;
+
+    text-align: center;
+  }
+
+  @media (min-width: $width-lg) {
+
+    &::before {
+      bottom: auto;
+      left: auto;
+      top: 50%;
+      right: -$arrow-width - 4px;
+      margin-top: -$arrow-height / 2 + 24px;
+
+      transform: none;
+    }
+  }
+}
+/*/agregator*/

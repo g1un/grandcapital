@@ -1,0 +1,52 @@
+/*result*/
+.result {
+  display: table;
+
+  margin: 0 auto;
+
+  line-height: 0;
+
+  position: relative;
+
+  &__bg {
+    max-width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    position: absolute;
+    top: 24.1935%;
+    left: 50%;
+    margin-left: -115 / 16 * $base-font-size;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 115 / 16 * $base-font-size;
+    height: 70 / 16 * $base-font-size;
+
+    color: #fff;
+
+    &--sell {
+      background: $red;
+    }
+
+    &--buy {
+      background: $table-bg-color;
+    }
+
+    span {
+      display: block;
+
+      color: #fff;
+      text-transform: uppercase;
+    }
+  }
+}
+/*/result*/

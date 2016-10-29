@@ -1,0 +1,38 @@
+/*steps*/
+.steps {
+
+  &__title {
+    margin-bottom: 34px;
+  }
+
+  &__list {
+    counter-reset: steps-counter;
+  }
+
+  &__item {
+    padding-left: 39 / 16 * $base-font-size;
+    padding-bottom: 25px;
+
+    position: relative;
+
+    &::before {
+      content: counter(steps-counter);
+      counter-increment: steps-counter;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      @extend .text-reg;
+      font-size: 44 / 16 * $base-font-size;
+      line-height: 1em;
+
+      opacity: .35;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 5px;
+  }
+}
+/*/steps*/

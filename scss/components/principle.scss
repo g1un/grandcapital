@@ -1,0 +1,57 @@
+/*principle*/
+.principle {
+  padding: 20px 15px;
+  margin-bottom: 52 / 16 * $base-font-size;
+
+  background: #fff;
+
+  &__logo {
+    margin-bottom: 27px;
+  }
+
+  &__title {
+    margin-bottom: 18px;
+
+    text-align: center;
+  }
+
+  &__item {
+    margin-bottom: 90px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $width-lg) {
+    padding: 32px 30px 46px;
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 30%;
+
+      margin-bottom: 0;
+
+      &:nth-child(2) {
+        width: 36%;
+      }
+
+      &:last-child {
+        display: flex;
+        align-items: center;
+
+        margin-right: -30px;
+        padding-top: 110px;
+      }
+    }
+
+    &__logo {
+      margin-top: 33px;
+    }
+  }
+}
+/*/principle*/

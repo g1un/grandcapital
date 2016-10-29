@@ -1,0 +1,38 @@
+/*bank*/
+.bank {
+  display: flex;
+
+  width: 45%;
+
+  &__logo {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__title {
+    line-height: 1em;
+    text-align: center;
+  }
+
+  &__value {
+
+    span{
+      padding-right: 5px;
+    }
+  }
+
+  &__data {
+    text-align: center;
+  }
+
+  @media (min-width: $width-lg) {
+
+    &__desc {
+      margin-right: 15px;
+    }
+  }
+}
+/*/bank*/

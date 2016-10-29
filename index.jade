@@ -5,6 +5,133 @@ html
 		meta(charset="UTF-8")
 		link(rel='stylesheet', type='text/css', href='css/style.css')
 	body
+		div.container
+			section.principle
+				h1.principle__title.title-lg Принцип работы ECN-счета
+				ul.principle__list
+					li.principle__item
+						ul.banks-list
+							li.banks-list__item.bank
+								div.bank__desc
+									div.bank__logo
+										img(src='img/bank-1.png' alt='bank-1')
+									h3.bank__title.title-sm Банк 1
+								ul.bank__data
+									li.bank__value.text-reg
+										span.text-bold Bid
+										| - 1.27458
+									li.bank__value.text-reg
+										span.text-bold Ask
+										| - 1.27476
+							li.banks-list__item.bank
+								div.bank__desc
+									div.bank__logo
+										img(src='img/bank-2.png' alt='bank-2')
+									h3.bank__title.title-sm Банк 2
+								ul.bank__data
+									li.bank__value.text-reg
+										span.text-bold Bid
+										| - 1.27458
+									li.bank__value.text-reg
+										span.text-bold Ask
+										| - 1.27476
+							li.banks-list__item.bank
+								div.bank__desc
+									div.bank__logo
+										img(src='img/bank-3.png' alt='bank-3')
+									h3.bank__title.title-sm Банк 3
+								ul.bank__data
+									li.bank__value.text-reg
+										span.text-bold Bid
+										| - 1.27458
+									li.bank__value.text-reg
+										span.text-bold Ask
+										| - 1.27476
+							li.banks-list__item.bank
+								div.bank__desc
+									div.bank__logo
+										img(src='img/bank-4.png' alt='bank-4')
+									h3.bank__title.title-sm Банк 4
+								ul.bank__data
+									li.bank__value.text-reg
+										span.text-bold Bid
+										| - 1.27458
+									li.bank__value.text-reg
+										span.text-bold Ask
+										| - 1.27476
+					li.principle__item
+						div.principle__logo.logo
+							img(src='img/logo.png' alt='logo')
+						div.agregator
+							h2.agregator__title.title-md ECN-агрегатор
+							table.agregator__table.table
+								tr.table__tr
+									th.table__th.text-th providers
+									th.table__th.text-th bid
+									th.table__th.text-th ask
+									th.table__th.text-th spead
+								tr.table__tr
+									td.table__td
+										div.table__row-title.text-bold Банк 1
+									td.table__td
+										div.table__el.table__el--red.text-reg 1.27458
+									td.table__td
+										div.table__el.text-reg 1.27476
+									td.table__td
+										div.table__el.text-reg 1.8 pips
+								tr.table__tr
+									td.table__td
+										div.table__row-title.text-bold Банк 2
+									td.table__td
+										div.table__el.text-reg 1.27455
+									td.table__td
+										div.table__el.text-reg 1.27469
+									td.table__td
+										div.table__el.text-reg 1.4 pips
+								tr.table__tr
+									td.table__td
+										div.table__row-title.text-bold Банк 3
+									td.table__td
+										div.table__el.text-reg 1.27451
+									td.table__td
+										div.table__el.text-reg 1.27462
+									td.table__td
+										div.table__el.text-reg 1.1 pips
+								tr.table__tr
+									td.table__td
+										div.table__row-title.text-bold Банк 4
+									td.table__td
+										div.table__el.text-reg 1.27453
+									td.table__td
+										div.table__el.table__el--yellow.text-reg 1.27460
+									td.table__td
+										div.table__el.text-reg 0.7 pips
+					li.principle__item
+						div.result
+							img(src='img/computer.png' alt='computer.png').result__bg
+							ul.result__list
+								li.result__item.result__item--sell.text-reg-lg
+									|1.27458
+									span.title-md sell
+								li.result__item.result__item--buy.text-reg-lg
+									|1.27462
+									span.title-md buy
+			section.steps
+				h2.steps__title.title-lg Начни зарабатывать c Grand Capital
+				ol.steps__list
+					li.steps__item
+						h3.steps__subtitle.text-reg-md Зарегистрируйтесь и откройте счет
+						p.text-reg Вы также можете открыть учебный демо-счет, чтобы понять принципы торговли.
+					li.steps__item.point
+						h3.steps__subtitle.text-reg-md Установите программу или откройте веб-трейдер в браузере
+						p.text-reg Для работы на Forex необходима торговая платформа. Для вашего удобства мы предлагаем терминал Metatrader, который вы можете бесплатно установить с нашего сайта, и веб-трейдер для онлайн торговли в браузере.
+					li.steps__item.point
+						h3.steps__subtitle.text-reg-md Выберите торговую стратегию
+						p.text-reg Спрогнозируйте, возрастет или снизится цена на выбранный вами актив, и на основе прогноза сделайте ставку на продажу или покупку.
+					li.steps__item.point
+						h3.steps__subtitle.text-reg-md Получайте прибыль
+						p.text-reg Средства, полученные от торговли, вы можете вывести любым удобным способом. Мы гарантируем быстрые операции с любыми суммами
+		div.arrow-to-top
 
-
+		script(src='js/jquery-3.1.1.min.js')
 		script(src='js/script.js')

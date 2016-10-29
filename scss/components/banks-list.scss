@@ -1,0 +1,119 @@
+/*banks-list*/
+.banks-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &__item {
+    display: none;
+    flex-direction: column;
+
+    width: 45%;
+
+    &:first-child,
+    &:nth-child(2){
+      display: flex;
+    }
+
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+    }
+
+    &:first-child {
+
+      &::before {
+        @include sprite($arrow-1);
+
+        bottom: -$arrow-1-width;
+        left: 50%;
+        margin-left: -$arrow-1-height / 2;
+
+        transform: scale(-1, 1) rotate(90deg);
+      }
+    }
+
+    &:nth-child(2),
+    &:last-child{
+
+      &::before {
+        @include sprite($arrow-1);
+
+        bottom: -$arrow-1-width;
+        right: 50%;
+        margin-right: -$arrow-1-height / 2;
+
+        transform: rotate(90deg);
+      }
+    }
+
+    @media (min-width: $width-sm) {
+      display: flex;
+
+      width: 22.5%;
+
+      &:nth-child(2){
+
+        &::before {
+          @include sprite($arrow-2);
+
+          bottom: -$arrow-2-width;
+          right: 50%;
+          margin-right: -$arrow-2-height / 2;
+
+          transform: scale(-1, 1) rotate(90deg);
+        }
+      }
+
+      &:nth-child(3){
+
+        &::before {
+          @include sprite($arrow-2);
+
+          bottom: -$arrow-2-width;
+          right: 50%;
+          margin-right: -$arrow-2-height / 2;
+
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+
+  @media (min-width: $width-lg) {
+    display: inline-flex;
+    flex-direction: column;
+
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -$arrows-width - 16px;
+      margin-top: -$arrows-height / 2;
+
+      @include sprite($arrows);
+    }
+
+    &__item {
+      width: auto;
+
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+/*/banks-list*/

@@ -1,0 +1,59 @@
+/*typography*/
+.title {
+  font-family: PT_Sans-Web-Bold, sans-serif;
+  font-size: 36 / 16 * $base-font-size;
+  line-height: 1.2em;
+  color: $text-color;
+  text-transform: none;
+}
+
+.title-lg {
+  @extend .title;
+
+  font-family: PT_Sans-Web-Regular, sans-serif;
+}
+
+.title-sm {
+  @extend .title;
+
+  font-size: 18 / 16 * $base-font-size;
+}
+
+.title-md {
+  @extend .title;
+
+  font-size: 24 / 16 * $base-font-size;
+}
+
+.text-reg {
+  font-family: PT_Sans-Web-Regular, sans-serif;
+  font-size: $base-font-size;
+  line-height: 1.2em;
+  color: $text-color;
+}
+
+.text-reg-md {
+  @extend .text-reg;
+
+  font-size: 22 / 16 * $base-font-size;
+}
+
+.text-reg-lg {
+  @extend .text-reg;
+
+  font-size: 24 / 16 * $base-font-size;
+}
+
+.text-bold {
+  @extend .text-reg;
+
+  font-family: PT_Sans-Web-Bold, sans-serif;
+}
+
+.text-th {
+  font-family: PT_Sans-Web-Italic, sans-serif;
+  font-size: $base-font-size;
+  line-height: 1.2em;
+  color: #fff;
+}
+/*/typography*/
