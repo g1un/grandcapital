@@ -178,7 +178,7 @@ The `sprites` mixin generates identical output to the CSS template
 /*/typography*/
 /*principle*/
 .principle {
-  padding: 20px 15px;
+  padding: 20px 10px;
   margin-bottom: 3.25rem;
   background: #fff;
 }
@@ -236,13 +236,6 @@ The `sprites` mixin generates identical output to the CSS template
 
 /*/principle*/
 /*bank*/
-.bank {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  width: 45%;
-}
-
 .bank__logo {
   text-align: center;
 }
@@ -252,19 +245,46 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .bank__title {
+  margin-bottom: 5px;
   line-height: 1em;
   text-align: center;
 }
 
+.bank__value {
+  font-size: 0.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .bank__value span {
-  padding-right: 5px;
+  padding-right: 2px;
+  font-size: 0.8rem;
 }
 
 .bank__data {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .bank__value {
+    font-size: 1rem;
+  }
+  .bank__value span {
+    padding-right: 5px;
+    font-size: 1rem;
+  }
+}
+
 @media (min-width: 1280px) {
+  .bank {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .bank__title {
+    margin-bottom: 0;
+  }
   .bank__desc {
     margin-right: 15px;
   }
@@ -284,19 +304,8 @@ The `sprites` mixin generates identical output to the CSS template
 }
 
 .banks-list__item {
-  display: none;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 45%;
+  width: 24%;
   position: relative;
-}
-
-.banks-list__item:first-child, .banks-list__item:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .banks-list__item::before {
@@ -316,7 +325,31 @@ The `sprites` mixin generates identical output to the CSS template
           transform: scale(-1, 1) rotate(90deg);
 }
 
-.banks-list__item:nth-child(2)::before, .banks-list__item:last-child::before {
+.banks-list__item:nth-child(2)::before {
+  background-image: url(../img/sprite.png);
+  background-position: -79px -150px;
+  width: 54px;
+  height: 21px;
+  bottom: -54px;
+  left: 50%;
+  margin-left: -28px;
+  -webkit-transform: scale(-1, 1) rotate(90deg);
+          transform: scale(-1, 1) rotate(90deg);
+}
+
+.banks-list__item:nth-child(3)::before {
+  background-image: url(../img/sprite.png);
+  background-position: -79px -150px;
+  width: 54px;
+  height: 21px;
+  bottom: -54px;
+  right: 50%;
+  margin-right: -28px;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.banks-list__item:last-child::before {
   background-image: url(../img/sprite.png);
   background-position: -79px 0px;
   width: 76px;
@@ -326,37 +359,6 @@ The `sprites` mixin generates identical output to the CSS template
   margin-right: -33.5px;
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
-}
-
-@media (min-width: 768px) {
-  .banks-list__item {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    width: 22.5%;
-  }
-  .banks-list__item:nth-child(2)::before {
-    background-image: url(../img/sprite.png);
-    background-position: -79px -150px;
-    width: 54px;
-    height: 21px;
-    bottom: -54px;
-    right: 50%;
-    margin-right: -10.5px;
-    -webkit-transform: scale(-1, 1) rotate(90deg);
-            transform: scale(-1, 1) rotate(90deg);
-  }
-  .banks-list__item:nth-child(3)::before {
-    background-image: url(../img/sprite.png);
-    background-position: -79px -150px;
-    width: 54px;
-    height: 21px;
-    bottom: -54px;
-    right: 50%;
-    margin-right: -10.5px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
-  }
 }
 
 @media (min-width: 1280px) {
