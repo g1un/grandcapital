@@ -121,12 +121,6 @@ The `sprites` mixin generates identical output to the CSS template
   font-weight: normal;
 }
 
-@font-face {
-  font-family: PT_Sans-Web-BoldItalic;
-  src: url(../fonts/PT_Sans-Web-BoldItalic.ttf);
-  font-weight: normal;
-}
-
 /*/fonts*/
 /*typography*/
 .title, .title-lg, .title-sm, .title-md {
